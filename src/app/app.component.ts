@@ -8,6 +8,7 @@ import { CommnetsComponent } from "./commnets/commnets.component";
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
   title = 'restaurantmenu';
   city = "Medellin";
