@@ -1,75 +1,17 @@
-<div>
-    <app-user></app-user>
-    <h1>Como solucionar problemas de CACHE en Angular:</h1>
-    <p>Parece que el problema está relacionado con la caché de compilación de Angular y TypeScript, específicamente con el archivo .tsbuildinfo. Esto puede suceder cuando Angular intenta leer información de compilaciones previas y hay conflictos en las rutas de archivos debido a OneDrive o cambios en el entorno.
-        Aquí tienes algunas soluciones para resolverlo:
-        
-        1️⃣ Eliminar la caché de Angular y TypeScript
-        Ejecuta los siguientes comandos en la terminal dentro de la carpeta de tu proyecto:
-        
-        bash
-        Copy
-        Edit
-        rm -rf .angular/cache
-        rm -rf node_modules package-lock.json
-        ng cache clean
-        Si usas Windows y rm -rf no funciona, usa:
-        
-        powershell
-        Copy
-        Edit
-        rmdir /s /q .angular\cache
-        rmdir /s /q node_modules
-        del package-lock.json
-        ng cache clean
-        Luego, reinstala las dependencias y prueba de nuevo:
-        
-        bash
-        Copy
-        Edit
-        npm install
-        ng serve
-        2️⃣ Asegurar que OneDrive no esté causando conflictos
-        A veces, cuando el proyecto está en OneDrive, puede haber problemas con rutas de archivos. Prueba moviendo tu proyecto a una carpeta fuera de OneDrive, por ejemplo:
-        
-        plaintext
-        Copy
-        Edit
-        C:\Users\horad\Documents\restaurantmenu\
-        Después de moverlo, prueba:
-        
-        bash
-        Copy
-        Edit
-        npm install
-        ng serve
-        3️⃣ Limpiar y reconstruir el proyecto
-        Si el problema persiste, intenta compilar desde cero:
-        
-        bash
-        Copy
-        Edit
-        ng build --clean
-        ng serve
-        4️⃣ Verificar la versión de TypeScript y Angular
-        Asegúrate de que estás usando versiones compatibles de TypeScript y Angular. Ejecuta:
-        
-        bash
-        Copy
-        Edit
-        ng version
-        Si TypeScript está en una versión incompatible, instala la versión recomendada (por ejemplo, si Angular usa TypeScript 5.3, instala esa versión):
-        
-        bash
-        Copy
-        Edit
-        npm install typescript5.3 --save-dev
-        Prueba estas soluciones y dime cuál te funciona o si sigue el problema. 🚀
-    </p>
-    @defer () {
-        <app-commnets></app-commnets>
-    }
-    @placeholder {
-        <p>Future Comments</p>
-    }
-</div>
+<mat-toolbar>
+    <button mat-icon-button> 
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span class="spacer"></span>
+    <button mat-icon-button> 
+        <mat-icon>share</mat-icon>
+    </button>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav opened node="side" [style.width]="'250px'">
+        <app-custom-sidenav></app-custom-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
