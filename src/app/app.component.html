@@ -1,15 +1,15 @@
 <mat-toolbar>
-    <button mat-icon-button> 
+    <button mat-icon-button (click)="collapsed.set(!collapsed())"> 
         <mat-icon>menu</mat-icon>
     </button>
     <span class="spacer"></span>
     <button mat-icon-button> 
-        <mat-icon>share</mat-icon>
+        <mat-icon>language</mat-icon>
     </button>
 </mat-toolbar>
 <mat-sidenav-container>
-    <mat-sidenav opened node="side" [style.width]="'250px'">
-        <app-custom-sidenav></app-custom-sidenav>
+    <mat-sidenav opened mode="side" [style.width]="sidenavWidth()">
+        <app-custom-sidenav [collapsed] = "collapsed()"></app-custom-sidenav>
     </mat-sidenav>
     <mat-sidenav-content class="content">
         <router-outlet></router-outlet>

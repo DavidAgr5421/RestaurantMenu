@@ -1,0 +1,36 @@
+h2{
+    color: white;
+}
+
+.sidenav-header{
+    padding-top: 25px;
+    text-align: center;
+    color: rgb(255, 255, 255) !important;
+
+    > img {
+        width: 200px;
+        height: 100%;
+        margin: 10% 0 20% 0;
+        object-fit: cover;
+    }
+}
+
+mat-nav-list a{
+    margin-top: 18%;
+}
+
+mat-nav-list a {
+    transition: background-color 0.3s ease;
+}
+
+mat-nav-list a:hover {
+    background-color: rgb(255, 255, 255) !important;  
+    color: black !important; }
+
+.sidenav-select{
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 10px;
+    border-top: 2px solid rgb(112, 110, 126);
+}
+

@@ -1,5 +1,5 @@
 h1{
-    color: rgb(73, 112, 196);
+    color: rgb(73, 112, 196,);
     font-size: 2rem;
 }
 
@@ -15,12 +15,23 @@ h3{
     padding: 24px;
 }
 
+button{
+    color: rgb(139, 137, 161);
+    background-color: rgb(9, 9, 10);
+    box-shadow: 1px 1px 4px 0px rgba(255, 255, 255, 0.25);
+}
 mat-toolbar{
     position: relative;
     z-index: 5;
     color-scheme: light dark;
+    background-color: rgb(38, 37, 46);
 }
 
 mat-sidenav-container{
-    height: calc(100vh -64px);
+    height: calc(100vh - 64px);
+}
+
+mat-sidenav{
+    background-color: rgb(27, 27, 32);
+    border-radius: 0;
 }
