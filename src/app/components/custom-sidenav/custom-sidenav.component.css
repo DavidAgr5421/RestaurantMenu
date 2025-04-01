@@ -16,11 +16,15 @@ h2{
 }
 
 mat-nav-list a{
-    margin-top: 18%;
+    margin: 18% auto;
 }
 
 mat-nav-list a {
     transition: background-color 0.3s ease;
+}
+
+mat-icon {
+    margin: 0 0 0 0;
 }
 
 mat-nav-list a:hover {
